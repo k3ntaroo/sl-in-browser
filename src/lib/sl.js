@@ -5,7 +5,7 @@ class SL {
   }
 
   run (fps, afterComplete = null) {
-    if (this.fps <= 0) {
+    if (fps <= 0) {
       return;
     }
     this.afterComplete = afterComplete;
@@ -20,7 +20,7 @@ class SL {
     clearInterval(this.setIntervalID);
   }
 
-  resume() {
+  resume () {
     this.setIntervalID = setInterval(this.proceed.bind(this), 1000 / this.fps);
   }
 
@@ -30,7 +30,7 @@ class SL {
     if (!result) {
       this.stop();
       if (this.afterComplete != null) {
-        this.afterComplete();
+        return this.afterComplete();
       }
     }
   }

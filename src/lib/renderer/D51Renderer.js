@@ -18,20 +18,23 @@ class D51Renderer extends SLRenderer {
       return false;
     }
 
-    const trainOffset = Math.floor((this.screen.height - this.train.height) / 2);
-    const coalOffset = this.fly ? 1 : 0;
+    const trainOffsetH = Math.floor((this.screen.height - this.train.height) / 2);
+    const coalOffsetH = trainOffsetH + (this.fly ? 1 : 0);
+
+    const trainOffsetW = this.screen.width - frame - 1;
+    const coalOffsetW = trainOffsetW + this.train.length;
 
     for (let h = 0; h < this.train.height; ++h) {
       this.screen.fillText(
-          h + trainOffset,
-          this.screen.width - frame - 1,
+          trainOffsetH + h,
+          trainOffsetW,
           this.train.body[frame % this.train.bodyPatterns][h]);
     }
 
     for (let h = 0; h < this.coal.height; ++h) {
       this.screen.fillText(
-          h + trainOffset + coalOffset,
-          this.screen.width - frame + this.train.length - 1,
+          coalOffsetH + h,
+          coalOffsetW,
           this.coal.body[frame % this.coal.bodyPatterns][h]);
     }
 
