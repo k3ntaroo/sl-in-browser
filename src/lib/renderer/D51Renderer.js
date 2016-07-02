@@ -1,14 +1,13 @@
+import SLRenderer from './SLRenderer';
+import D51Model from '../resources/D51';
 
-const SLRenderer = require('./SLRenderer.js');
-
-class D51Renderer extends SLRenderer {
+export default class D51Renderer extends SLRenderer {
   constructor (screen, options) {
     super(screen, options);
 
     this.fly = options.indexOf('F') != -1;
     this.help = options.indexOf('a') != -1;
 
-    const D51Model = require('../resources/D51');
     this.train = D51Model.train;
     this.coal = D51Model.coal;
   }
@@ -42,5 +41,3 @@ class D51Renderer extends SLRenderer {
     return true;
   }
 }
-
-module.exports = D51Renderer;

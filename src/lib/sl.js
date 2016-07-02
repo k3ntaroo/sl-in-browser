@@ -1,5 +1,5 @@
 
-class SL {
+export default class SL {
   constructor (renderer) {
     this.renderer = renderer;
   }
@@ -35,5 +35,3 @@ class SL {
     }
   }
 }
-
-module.exports = SL;

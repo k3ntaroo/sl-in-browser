@@ -1,11 +1,11 @@
-window.onload = () => {
-  const SL = require('./lib/sl');
-  const Screen = require('./lib/screen');
+import SL from './lib/sl';
+import Screen from './lib/screen';
+import D51Renderer from './lib/renderer/D51Renderer';
 
+window.onload = () => {
   const slField = document.getElementById('sl-wrapper');
   const screen = new Screen(slField);
 
-  const D51Renderer = require('./lib/renderer/D51Renderer');
   const renderer = new D51Renderer(screen, "");
 
   const loop = () => {

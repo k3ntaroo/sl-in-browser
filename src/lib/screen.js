@@ -1,5 +1,5 @@
 
-class Screen {
+export default class Screen {
   constructor (dom) {
     this.dom = dom;
 
@@ -60,5 +60,3 @@ class Screen {
     this.dom.textContent = text;
   }
 }
-
-module.exports = Screen;

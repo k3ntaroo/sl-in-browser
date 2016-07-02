@@ -1,6 +1,6 @@
 
 /* abstract class */
-class SLRenderer {
+export default class SLRenderer {
   constructor (screen, options) {
     this.screen = screen;
   }
@@ -9,5 +9,3 @@ class SLRenderer {
     this.screen.clear();
   }
 }
-
-module.exports = SLRenderer;
