@@ -62,7 +62,7 @@ const train = {
   bodyPatterns: 6,
   length: 54,
   height: 10,
-  funnelPosition: 7,
+  funnelOffset: 7,
 };
 
 
