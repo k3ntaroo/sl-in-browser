@@ -1,7 +1,7 @@
 {
   "name": "sl-in-browser",
   "version": "0.0.1",
-  "description": "SL train running in browser",
+  "description": "SL runs across your browser",
   "author": "Kentaro Takakuwa",
   "license": "MIT",
   "devDependencies": {
