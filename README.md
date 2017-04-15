@@ -5,4 +5,4 @@ SL runs across your browser
 
 # DEMO
 
-[demo](https://lrmystp.github.io/sl-in-browser/)
+[demo](https://k3ntaroo.github.io/sl-in-browser/)
